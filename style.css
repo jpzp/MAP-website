@@ -1,0 +1,242 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing:border-box
+}
+body {
+  margin: 8px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#logo {
+  margin-top: 36px;
+}
+h1, h2 {
+  margin: 0;
+}
+h1 {
+  font-size: 30px;
+  color: hsl(212, 18%, 24%)
+}
+h2 {
+  font-size: 18px;
+  color: hsl(212, 12%, 45%)
+}
+ol{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 36px 0 18px;
+}
+li {
+  width: 50px;
+  margin: 0px 5px;
+}
+a {
+  color: hsl(212, 12%, 45%);
+  text-decoration: none;
+}
+a:hover {
+  color: hsl(212, 18%, 24%);
+  font-weight: 500;
+}
+/*END HEADER*/
+
+/*FOOTER*/
+footer ol{
+  justify-content: center;
+}
+footer li {
+  justify-self: center;
+  width: fit-content;
+}
+footer a {
+  justify-self: center;
+}
+/*END FOOTER*/
+
+/*WORKS Body*/
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 24px; 
+}
+.work-card {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 800px;
+  margin: 8px 0;
+}
+.img {
+  width: 371px;
+  height: 201px;
+  background-color: hsl(212, 18%, 16%);
+  border-radius: 10px;
+}
+.card-text {
+  padding: 8px;
+  width: 430px;
+}
+.card-text h3 {
+  color: hsl(212, 18%, 24%);
+  margin: 0;
+}
+.card-text h4 {
+  color: hsl(212, 12%, 45%);
+  margin: 0;
+}
+.card-text p {
+  color: hsl(212, 12%, 45%);
+}
+/*END WORKS*/
+#contact {
+  flex-direction: row; 
+  align-items: flex-start;
+}
+#form-wrapper {
+  padding: 8px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+input, textarea {
+  padding: 12px;
+  margin: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*ABOUT*/
+#about {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+img {
+  border-radius: 5px;
+}
+#about-text {
+  padding: 0 12px;
+}
+#about-text h3 {
+  color: hsl(212, 18%, 24%);
+  margin: 0;
+  font-size: 18px;
+}
+#about-text h4 {
+  color: hsl(212, 12%, 45%);
+  margin: 0;
+  font-size: 16px;
+}
+#about-text p {
+  width: 400px;
+  color: hsl(212, 12%, 45%);
+  font-size: 14px;
+}
+/*END ABOUT*/
+
+/*CONTACT*/
+
+/*END CONTACT*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
