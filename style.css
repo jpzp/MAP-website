@@ -142,6 +142,15 @@ img {
   color: hsl(212, 12%, 45%);
   font-size: 14px;
 }
+#about-img {
+  display: block;
+}
+#contact-info {
+  font-size: 14px;
+  text-align: center;
+  color: hsl(212, 12%, 24%);
+  font-weight: 600;
+}
 /*END ABOUT*/
 
 /*CONTACT*/
