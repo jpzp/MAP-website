@@ -154,7 +154,12 @@ img {
 /*END ABOUT*/
 
 /*CONTACT*/
-
+#map-ac {
+  height: 450px;
+}
+#form-wrapper {
+  padding: 80px 24px 0;
+}
 /*END CONTACT*/
 
 /* Slideshow container */
