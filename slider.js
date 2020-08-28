@@ -4,11 +4,13 @@ showSlides(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  timer.reset();
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  timer.reset();
 }
 
 function showSlides(n) {
@@ -26,11 +28,37 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-//the second ar
-setInterval(function(){ plusSlides(1)}, 8000);
+
+//Timer
+function Timer(fn, t) {
+  var timerObj = setInterval(fn, t);
+
+  this.stop = function() {
+    if (timerObj) {
+      clearInterval(timerObj);
+      timerObj = null;
+    }
+    return this;
+  }
+
+  //start timer with curr settings
+  this.start = function() {
+    if (!timerObj) {
+      this.stop();
+      timerObj = setInterval(fn, t);
+    }
+    return this;
+  }
+  this.reset = function() {
+    return this.stop().start();
+  }
+}
+
+var timer = new Timer(function() {
+  plusSlides(1);
+}, 5000);
 
 document.onkeydown = checkKey;
-
 //Add arrow navigation 
 function checkKey(e) {
   
@@ -39,11 +67,11 @@ function checkKey(e) {
   if (e.keyCode == '37') {
     // left arrow
     plusSlides(-1); 
-
+    timer.reset();
   }
   else if (e.keyCode == '39') {
     // right arrow
-    console.log("Right arrow pressed");
     plusSlides(1);
+    timer.reset();
   }
 }
