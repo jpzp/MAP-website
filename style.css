@@ -167,6 +167,7 @@ img {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  background-color: black;
 }
 
 /* Hide the images by default */
