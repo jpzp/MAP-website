@@ -75,6 +75,7 @@ article {
   margin: 8px 0;
 }
 .img {
+  position: relative;
   width: 371px;
   height: 201px;
   background-color: hsl(212, 18%, 16%);
@@ -95,6 +96,19 @@ article {
 .card-text p {
   color: hsl(212, 12%, 45%);
 }
+.img .svg {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.img:hover .svg{
+  display: block;
+}
+
 /*END WORKS*/
 #contact {
   flex-direction: row; 
