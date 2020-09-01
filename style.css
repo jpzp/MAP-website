@@ -137,15 +137,12 @@ article {
   padding: 8px;
   width: 430px;
 }
-.card-text h3 {
+.card-text h3, h4 {
   color: hsl(212, 18%, 24%);
   margin: 0;
+  font-weight: 600;
 }
-.card-text h4 {
-  color: hsl(212, 12%, 45%);
-  margin: 0;
-}
-.card-text p {
+.card-text h4, p {
   color: hsl(212, 12%, 45%);
 }
 .img .svg {
@@ -159,6 +156,25 @@ article {
 }
 .img:hover .svg{
   display: block;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: hsla(212, 0%, 0%, .4);
+  z-index: 1;
+}
+iframe {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 /*END WORKS*/
 
