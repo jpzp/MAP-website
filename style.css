@@ -110,17 +110,32 @@ article {
 }
 
 /*END WORKS*/
+
+/* CONTACT */
+#servicesOffered {
+  width: 600px;
+  align-self: center;
+}
 #contact {
   flex-direction: row; 
   align-items: flex-start;
 }
 #form-wrapper {
   padding: 8px;
+  width: 350px;
 }
 form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+#name {
+  display: flex;
+}
+#name input {
+  box-sizing: border-box;
+  width: 170px;
+  margin: 2px;
 }
 input, textarea {
   padding: 12px;
@@ -128,6 +143,13 @@ input, textarea {
   font-size: 12px;
   font-weight: 600;
 }
+#map-ac {
+  height: 450px;
+}
+#form-wrapper {
+  padding:  8px 0;
+}
+/*END OF CONTACT*/
 
 /*ABOUT*/
 #about {
@@ -166,15 +188,6 @@ img {
   font-weight: 600;
 }
 /*END ABOUT*/
-
-/*CONTACT*/
-#map-ac {
-  height: 450px;
-}
-#form-wrapper {
-  padding: 80px 24px 0;
-}
-/*END CONTACT*/
 
 /* Slideshow container */
 .slideshow-container {
