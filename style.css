@@ -117,7 +117,7 @@ footer a {
 /*END FOOTER*/
 
 /*WORKS Body*/
-article {
+article #works{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,6 +198,7 @@ iframe {
 
 /*CONTACT*/
 #contact {
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
@@ -234,38 +235,45 @@ input, textarea {
 /*END OF CONTACT*/
 
 /*ABOUT*/
-#about {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
+article #about {
+  margin: 8px 24px;
+  overflow: hidden;
 }
-img {
-  border-radius: 5px;
+#titleName {
+  margin-left: 10%;
 }
-#about-text {
-  padding: 0 12px;
-}
-#about-text h3 {
+#titleName h3 {
   color: hsl(212, 18%, 24%);
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
 }
-#about-text h4 {
+#titleName h4 {
   color: hsl(212, 12%, 45%);
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
+}
+#bio-img {
+  border-radius: 5px;
+  float: left;
+  margin-left: 10%;
+  margin-right: 15px;
+}
+#about-text {
+  display: block;
+  margin-left: 10%;
+  width: 80%;
+  line-height: 1.5;
 }
 #about-text p {
   width: 400px;
   color: hsl(212, 12%, 45%);
   font-size: 14px;
 }
-#about-img {
-  display: block;
-}
 #contact-info {
-  font-size: 14px;
+  clear: both;
   text-align: center;
+  padding-top: 24px;
+  font-size: 16px;
   color: hsl(212, 12%, 24%);
   font-weight: 600;
 }
@@ -407,9 +415,13 @@ img {
   .work-card h4, p {
     font-size: 18px;
   }
-
-
+  
   /* About */
+  #bio-img {
+  }
+  #about-text p {
+    font-size: 16px;
+  }
   /* Contact */
 }
 
