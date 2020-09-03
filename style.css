@@ -196,7 +196,55 @@ iframe {
 }
 /*END WORKS*/
 
-/*CONTACT*/
+#contact {
+  padding: 24px 0 0 0; 
+  margin-left: 10%;
+}
+#map-ac {
+  height: 500px;
+  float: right;
+  margin-right: 5%;
+}
+#servicesOffered {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: hsl(212, 12%, 24%);
+}
+#form-wrapper {
+  padding: 12px;
+  width: 100%;
+}
+form {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 60%
+}
+#name {
+  flex-direction: row;
+}
+#name input{
+  width: 48%;
+}
+input, textarea {
+  padding: 12px;
+  border: 2px solid hsl(212, 12%, 24%);
+  margin: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+textarea {
+  
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*CONTACT
 #contact {
   display: flex;
   flex-direction: row;
@@ -208,10 +256,6 @@ iframe {
 #form-wrapper {
   padding: 12px;
   width: 500px;
-}
-#servicesOffered {
-  text-align: left;
-  font-size: 16px;
 }
 form {
   display: flex;
@@ -226,12 +270,7 @@ form {
 #name input {
   width: 50%;
 }
-input, textarea {
-  padding: 12px;
-  margin: 4px;
-  font-size: 12px;
-  font-weight: 600;
-}
+
 /*END OF CONTACT*/
 
 /*ABOUT*/
@@ -424,6 +463,17 @@ article #about {
   }
   /* Contact */
 }
+
+@media screen and (max-device-width: 650px){
+  form {
+    width: 80%
+  }
+  #map-ac {
+    height: 350px;
+    margin-right: 10%
+  }
+}
+
 
 @-webkit-keyframes fade {
   from {opacity: .4}
