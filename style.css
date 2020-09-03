@@ -117,12 +117,12 @@ footer a {
 /*END FOOTER*/
 
 /*WORKS Body*/
-article #works{
+article#works{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 24px 24px; 
+  margin: 24px 24px;
 }
 .work-card {
   display: flex;
@@ -274,7 +274,7 @@ form {
 /*END OF CONTACT*/
 
 /*ABOUT*/
-article #about {
+article#about {
   margin: 8px 24px;
   overflow: hidden;
 }
@@ -431,7 +431,7 @@ article #about {
     padding: 8px;
     align-self: center;
   }
-  /* Slider */
+
   /* Works */
   .work-card {
     flex-direction: column;
@@ -472,6 +472,16 @@ article #about {
     height: 350px;
     margin-right: 10%
   }
+
+  /* Slider */
+  .slideshow-container {
+    height: 50%;
+    width: auto;
+  }
+  .slideshow-container img {
+    object-fit: cover;
+  }
+
 }
 
 
