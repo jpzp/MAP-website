@@ -3,6 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <body>
 
@@ -11,12 +12,15 @@
         <h1>Michael A. Perez</h1>
     </div>
     <h2 id="title">Video & Interactive Media Producer</h2>
-    <nav>
+    <nav id="nav" class="nav">
       <ol>
         <li class="nav-list"><a href="index.html">Home</a></li>
         <li class="nav-list"><a href="works.html">Works</a></li>
         <li class="nav-list"><a href="about.html">About</a></li>
         <li class="nav-list"><a href="contact.html">Contact</a></li>
+        <li href="javascript:void(0);" class="icon" onclick="expand()">
+          <i class="fa fa-bars"></i>
+        </a>
       </ol>
     </nav>
   </header>
@@ -47,4 +51,5 @@
     </ol>
   </footer>
 </body>
+<script src="expand.js"></script>
 </html>
