@@ -384,9 +384,31 @@ img {
     padding: 8px;
     align-self: center;
   }
-  
   /* Slider */
   /* Works */
+  .work-card {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .img {
+    width: 500px;
+    margin-bottom: 80px;
+  }
+  .work-card img {
+    width: 500px;
+  }
+  .card-text {
+    width: 450px;
+  }
+  .work-card h3 {
+    font-size: 24px;
+  }
+  .work-card h4, p {
+    font-size: 18px;
+  }
+
+
   /* About */
   /* Contact */
 }
