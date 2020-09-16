@@ -22,6 +22,34 @@
   font-family: big-noodle;
   src: url('fonts/big_noodle_titling.ttf');
 }
+@font-face {
+  font-family: eight-bit;
+  src: url('fonts/8-bit-pusab.ttf');
+}
+@font-face {
+  font-family: bubblegum;
+  src: url('fonts/Bubblegum.ttf');
+}
+@font-face {
+  font-family: cookie;
+  src: url('fonts/Cookie.otf');
+}
+@font-face {
+  font-family: couture;
+  src: url('fonts/couture-bld.otf');
+}
+@font-face {
+  font-family: mermaid;
+  src: url('fonts/Mermaid1001.ttf');
+}
+@font-face {
+  font-family: secret;
+  src: url('fonts/secrcode.ttf');
+}
+@font-face {
+  font-family: vintage;
+  src: url('fonts/VintageParty-FreeVersion.ttf');
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -171,9 +199,13 @@ article#works{
   background: white;
 }
 .type {
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-family: quicksand;
   font-size: 16px;
+  font-weight: 700;
+  color: hsl(212, 18%, 24%);
 }
 .img {
   position: relative;
@@ -188,6 +220,7 @@ article#works{
 .card-text {
   padding: 0 8px 8px 8px;
   width: 430px;
+  position: relative;
 }
 .card-text h3, h4 {
   color: hsl(212, 18%, 24%);
@@ -264,7 +297,45 @@ iframe {
   right: 0;
   margin: 12px auto; 
 }
-/*END WORKS*/
+/* WORK CARD TITLE FONT SETTING */
+.work-card b {
+  font-size: 24px;
+}
+.work-card#crazy-car b {
+  font-family: big-noodle;
+  font-size: 28px;
+}
+.work-card#i-think-im-gay b {
+  font-family: caviarDreamsBold;
+}
+.work-card#theo-and-casey b {
+  font-family: cookie;
+  letter-spacing: 1px;
+}
+.work-card#way-of-the-wolf b {
+  font-family: eight-bit;
+  font-size: 20px;
+}
+.work-card#in-my-life b {
+  font-family: vintage;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+}
+.work-card#not-that-girl b {
+  font-family: secret;
+}
+.work-card#biographers-wife b {
+  font-family: mermaid;
+  letter-spacing: .8px;
+}
+.work-card#wonder-buffalo b {
+  font-family: bubblegum;
+}
+.work-card#con b {
+  font-family: couture;
+  letter-spacing: .6px;
+}
+/* END WORKS*/
 
 #contact {
   padding: 24px 0 0 0; 
