@@ -5,10 +5,20 @@
   src: url('fonts/Rajdhani-Regular.ttf');
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, a {
   margin: 0;
+  font-size: 100%;
+  font: inherit;
 }
-
+body {
+  height: 100%;
+  background-image: url('images/NeonCartCompass.png');
+  background-color: #131217;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: -950px -1050px;
+  overflow-x: hidden;
+}
 .icon::after {
   display: inline-block;
   font-family: "Font Awesome 5 Free"; 
@@ -18,7 +28,6 @@ h1, h2, h3, h4, p {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
-
 header {
   font-family: rajdhani;
   color: #E6E6E8;
@@ -26,57 +35,94 @@ header {
 header h1 {
   font-size: 8.5em;
   line-height: 144px;
-  padding: 2rem .8rem 1rem;
-  margin: 20px;
   letter-spacing: 3.25px;
 }
-header h2#title {
+header h2 {
   color: #A4A4A4;
   font-size: 3.5em;
-  padding: 0 20px 20px;
-  margin: 20px 20px 40px;
   font-weight: 300;
   line-height: 100px;
 }
-header h2#desktop {
+header h2#title {
   display: none;
 }
+
 nav {
-  position: absolute;
-  top: 3em;
-  right: 1em;
-}
-nav::after {
-  content: "\f142";
-  color: #A4A4A4;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-size: 4em;
-  margin-right: 0.5em;
 }
 .nav ol{
-  width: 80%;
-  background-color: grey;
-}
-body {
-  background-image: url('images/NeonCartCompass.png');
-  background-color: #131217;
-  background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: 220px -100px;
-  /*
-  background-position: 220px -50px;
-  */
+
 }
 
+.container {
+  width: 60%;
+  position: absolute;  
+  bottom: 0;
+  right: 0;
+}
 .slideshow-container {
-  width: 1000px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin: 0 20px;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+}
+.dot {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  margin: 0 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text a {
+  font-style: normal;
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 36px;
+  font-family: rajdhani;
+  padding: 8px 12px;
   position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
+footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 footer ol{
   justify-content: center;
   display: flex;
@@ -95,39 +141,29 @@ footer img {
   width: 50px;
   border-radius: 8px;
 }
-#dots {
-  margin-bottom: 64px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 35px;
-  width: 35px;
-  margin: 0 12px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 @media screen and (max-device-width: 800px) {
-  /* Slider */
-  .slideshow-container {
-    height: 1000px;
-    width: 100%;
-  }
-  .mySlides {
-    height: 1000px;
-  }
-  .slideshow-container img {
-    object-fit: cover;
-    width: 100%;
-    height: 1000px;
+  body {
+    background-size: 150%;
+    background-position: 220px -100px;
   }
   
+  header h1 {
+    padding: 2rem .8rem 1rem;
+    margin: 20px;
+  }
+  header h2#title {
+    display: block;
+    padding: 0 20px 20px;
+    margin: 20px 20px 40px;
+  }
+  header h2#desktop {
+    display: none;
+  }
+  nav {
+    position: absolute;
+    top: 3em;
+    right: 1em;
+  }
   .nav ol li, #menu  {
     display: none;
   }
@@ -136,9 +172,36 @@ footer img {
     display: block;
     position: absolute;
   }
-
   .nav.responsive #menu {
     width: 90%;
-    
   }
+  nav::after {
+    content: "\f142";
+    color: #A4A4A4;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-size: 4em;
+    margin-right: 0.5em;
+  }
+  /* Slider */
+  .container {
+    width: 100%;
+    position: block;
+    bottom: none;
+    top: none;
+  }
+  .slideshow-container {
+    position: relative;
+    height: 1000px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .mySlides {
+    height: 1000px;
+  }
+  .slideshow-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 1000px;
+  }  
 }
