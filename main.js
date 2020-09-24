@@ -105,10 +105,10 @@ slide.showSlides(1);
 // Responsive Navbar expansion 
 function expand() {
   var x = document.getElementById("nav");
-  if (x.className === "nav") {
+  if (x.className === "nav icon") {
     x.className += " responsive";
   } else {
-    x.className = "nav";
+    x.className = "nav icon";
   }
 }
 
@@ -154,16 +154,6 @@ function videoOnClick(cardId){
   frame.allowFullscreen = true;
   overlay.appendChild(frame);
 }
-
-function expand() {
-  var x = document.getElementById("nav");
-  if (x.className === "nav") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav";
-  }
-}
-
 
 
 

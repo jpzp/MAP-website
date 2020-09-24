@@ -50,6 +50,18 @@
   font-family: vintage;
   src: url('fonts/VintageParty-FreeVersion.ttf');
 }
+@font-face {
+  font-family: lobster;
+  src: url('fonts/Lobster-Regular.ttf');
+}
+@font-face {
+  font-family: rajdhani;
+  src: url('fonts/Rajdhani-Regular.ttf');
+}
+@font-face {
+  font-family: la-belle;
+  src: url('fonts/LaBelleAurore-Regular.ttf');
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -307,7 +319,7 @@ iframe {
   font-size: 28px;
 }
 .work-card#i-think-im-gay b {
-  font-family: caviarDreamsBold;
+  font-family: lobster;
 }
 .work-card#theo-and-casey b {
   font-family: cookie;
@@ -323,11 +335,11 @@ iframe {
   letter-spacing: 1.8px;
 }
 .work-card#not-that-girl b {
-  font-family: secret;
+  font-family: rajdhani;
 }
-.work-card#biographers-wife b {
-  font-family: mermaid;
-  letter-spacing: .8px;
+.work-card#biographers-wife b, #biographers-wife h3{
+  font-family: la-belle;
+  padding-top: 5px;
 }
 .work-card#wonder-buffalo b {
   font-family: bubblegum;
@@ -340,60 +352,49 @@ iframe {
 
 #contact {
   padding: 24px 0 0 0; 
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.pair {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
 }
 #map-ac {
-  height: 500px;
-  float: right;
-  margin-right: 12%;
+  width: 15%;
+  margin-left: 5%;
 }
 #servicesOffered {
   font-family: quicksand;
   text-overflow: ellipsis;
   width: 75ch;
   text-align: left;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.5;
   color: hsl(212, 12%, 24%);
-  width: 60%;
-  padding: 12px;
+  width: 65%;
+  padding: 24px;
+  margin-left: 5%;
   border-radius: 25px;
   background: white;
   box-shadow: 2px 5px hsla(212, 12%, 24%, .2), 8px 12px hsla(212, 12%, 24%, .025);
-}
-#form-wrapper {
-  padding: 12px;
-  width: 100%;
 }
 form {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 60%;
-}
-#name {
-  flex-direction: row;
   width: 100%;
-  margin: 4px;
-}
-#name input{
-  width: 49%;
-}
-input#fname {
-  margin: 0 .5% 0 0;
-}
-input#lname {
-  margin: 0 0 0 .5%;
 }
 input, textarea {
   padding: 12px;
   border: 2px solid hsl(212, 12%, 24%);
   border-radius: 5px;
-  margin: 4px;
+  margin: 4px auto;
   font-size: 18px;
   font-weight: 600;
-  width: 100%;
+  width: 90%;
 }
 #form {
   display: flex;
@@ -514,16 +515,6 @@ article#about {
   text-align: center;
 }
 
-/* Number text (1/3 etc) 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-*/
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -619,24 +610,34 @@ article#about {
   /* Contact */
 }
 
-@media screen and (max-device-width: 650px){
+@media screen and (max-device-width: 800px){
+  #contact {
+    display: inline-block;
+  }
+  .pair {
+    display: flex;
+    flex-direction: row;
+  }
   form {
-    width: 80%
+    width: 100%;
   }
   #map-ac {
-    height: 350px;
-    margin-right: 10%
+    height: 33%;
   }
 
   /* Slider */
   .slideshow-container {
-    height: 50%;
-    width: auto;
+    height: 1000px;
+    width: 100%;
+  }
+  .mySlides {
+    height: 1000px;
   }
   .slideshow-container img {
     object-fit: cover;
+    width: 100%;
+    height: 1000px;
   }
-
 }
 
 
