@@ -10,15 +10,26 @@ h1, h2, h3, h4, p, a {
   font-size: 100%;
   font: inherit;
 }
+/*image position needs to be fixed*/
 body {
-  height: 100%;
+  font-family: rajdhani;
   background-image: url('images/NeonCartCompass.png');
   background-color: #131217;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: -950px -1050px;
+  background-position: -1150px -1300px;
   overflow-x: hidden;
+
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 0.3fr;
+  grid-template-areas:
+    "title title title"
+    "nav main main"
+    "socials main main";
 }
+
 .icon::after {
   display: inline-block;
   font-family: "Font Awesome 5 Free"; 
@@ -29,15 +40,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 header {
-  font-family: rajdhani;
   color: #E6E6E8;
+  grid-area: title;
 }
 header h1 {
+  text-align: right;
   font-size: 8.5em;
   line-height: 144px;
   letter-spacing: 3.25px;
+  padding-top: 20px;
 }
 header h2 {
+  text-align: right;
   color: #A4A4A4;
   font-size: 3.5em;
   font-weight: 300;
@@ -48,20 +62,28 @@ header h2#title {
 }
 
 nav {
+  grid-area: nav;
+  padding-top: 50%;
+  margin: 0 auto;
 }
 .nav ol{
-
+  list-style: none;
+  padding: 0;
+}
+.nav ol li {
+  margin: 50px 0;
+}
+.nav ol li a {
+  text-decoration: none;
+  color: #A4A4A4;
+  font-size: 64px;
 }
 
 .container {
-  width: 60%;
-  position: absolute;  
-  bottom: 0;
-  right: 0;
+  grid-area: main;
 }
 .slideshow-container {
-  width: 100%;
-  margin: 0 20px;
+  margin: 0;
 }
 .mySlides {
   display: none;
@@ -84,7 +106,6 @@ nav {
 }
 .prev, .next {
   cursor: pointer;
-  position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
@@ -106,6 +127,7 @@ nav {
   background-color: rgba(0,0,0,0.8);
 }
 .text a {
+  display:none;
   font-style: normal;
   text-decoration: none;
   color: #f2f2f2;
@@ -119,14 +141,14 @@ nav {
 }
 
 footer {
-  bottom: 0;
-  right: 0;
-  left: 0;
+  grid-area: socials;
 }
 footer ol{
+  list-style: none;
   justify-content: center;
   display: flex;
   padding-top: 64px;
+  margin: 0 auto;
   padding-inline-start: 0px;
 }
 footer li {
@@ -141,17 +163,27 @@ footer img {
   width: 50px;
   border-radius: 8px;
 }
+
 @media screen and (max-device-width: 800px) {
   body {
     background-size: 150%;
     background-position: 220px -100px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+    grid-template-areas:
+      "title"
+      "main"
+      "socials";
   }
   
   header h1 {
     padding: 2rem .8rem 1rem;
     margin: 20px;
+    text-align: left;
   }
   header h2#title {
+    text-align: left;
     display: block;
     padding: 0 20px 20px;
     margin: 20px 20px 40px;
@@ -160,9 +192,7 @@ footer img {
     display: none;
   }
   nav {
-    position: absolute;
-    top: 3em;
-    right: 1em;
+    display: none;
   }
   .nav ol li, #menu  {
     display: none;
@@ -170,7 +200,6 @@ footer img {
   .nav.responsive li, .nav.responsive #menu {
     float: none;
     display: block;
-    position: absolute;
   }
   .nav.responsive #menu {
     width: 90%;
@@ -187,8 +216,6 @@ footer img {
   .container {
     width: 100%;
     position: block;
-    bottom: none;
-    top: none;
   }
   .slideshow-container {
     position: relative;
