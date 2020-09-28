@@ -2,30 +2,31 @@
 <html>
   <head>
       <meta charset="UTF-8">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="home.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <body>
 
   <header>
     <div id="logo">
-        <h1>Michael A. Perez</h1>
+      <h1>Michael A. Perez</h1>
     </div>
-    <h2 id="title">Video & Interactive Media Producer</h2>
-    <nav id="nav" class="nav">
-      <ol>
+    <h2 id="title">Video &<br>Interactive<br> Media Producer</h2>
+    <h2 id="desktop">Video & Interactive Media Producer</h2>
+  </header>
+  
+  <nav class="nav icon" id="nav" onclick="expand()">
+    <div id="menu">
+      <ol id="navList">
         <li class="nav-list"><a href="index.html">Home</a></li>
-        <li class="nav-list"><a href="works.html">Works</a></li>
+        <li class="nav-list"><a href="works.html">Work</a></li>
         <li class="nav-list"><a href="about.html">About</a></li>
         <li class="nav-list"><a href="contact.html">Contact</a></li>
-        <li href="javascript:void(0);" class="icon" onclick="expand()">
-          <i class="fa fa-bars"></i>
-        </a>
       </ol>
-    </nav>
-  </header>
-
-  <article id="contact">
+    </div>
+  </nav>
+  
+  <article id="contact" class="container">
     <div class="pair">
     <h2 id="servicesOffered">  
       I offer a wide range of production services from script notes and project development all the way to full-on production management. If you'd like to discuss a project or just have a general inquiry, please reach out using the form below. Thanks for visiting!
@@ -42,6 +43,7 @@
       </div>
     </form>
   </article>
+
   <footer>
     <ol>
       <li class="foot-list"><a href="mailto:map@neoncartography.com"><img src="icons/Gmail-icon.png"></a></li>

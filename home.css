@@ -1,8 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 @font-face {
+  font-family: caviarDreams;
+  src: url('fonts/CaviarDreams.ttf') format('truetype');
+}
+@font-face {
+  font-family: caviarDreamsBold;
+  src: url('fonts/CaviarDreams_Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: quicksand;
+  src: url('fonts/Quicksand_Book.otf');
+}
+@font-face {
+  font-family: quicksand-bold;
+  src: url('fonts/Quicksand_Bold.otf');
+}
+@font-face {
+  font-family: lemonmilk;
+  src: url('fonts/LEMONMILK-Regular.otf');
+}
+@font-face {
+  font-family: big-noodle;
+  src: url('fonts/big_noodle_titling.ttf');
+}
+@font-face {
+  font-family: eight-bit;
+  src: url('fonts/8-bit-pusab.ttf');
+}
+@font-face {
+  font-family: bubblegum;
+  src: url('fonts/Bubblegum.ttf');
+}
+@font-face {
+  font-family: cookie;
+  src: url('fonts/Cookie.otf');
+}
+@font-face {
+  font-family: couture;
+  src: url('fonts/couture-bld.otf');
+}
+@font-face {
+  font-family: mermaid;
+  src: url('fonts/Mermaid1001.ttf');
+}
+@font-face {
+  font-family: secret;
+  src: url('fonts/secrcode.ttf');
+}
+@font-face {
+  font-family: vintage;
+  src: url('fonts/VintageParty-FreeVersion.ttf');
+}
+@font-face {
+  font-family: lobster;
+  src: url('fonts/Lobster-Regular.ttf');
+}
+@font-face {
   font-family: rajdhani;
   src: url('fonts/Rajdhani-Regular.ttf');
+}
+@font-face {
+  font-family: la-belle;
+  src: url('fonts/LaBelleAurore-Regular.ttf');
 }
 
 h1, h2, h3, h4, p, a {
@@ -23,7 +83,7 @@ body {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 300px 2fr 300px;
   grid-template-areas:
     "title title title"
     "nav main main"
@@ -42,6 +102,7 @@ body {
 header {
   color: #E6E6E8;
   grid-area: title;
+  margin: 24px 48px;
 }
 header h1 {
   text-align: right;
@@ -82,7 +143,7 @@ nav {
   grid-area: main;
 }
 .slideshow-container {
-  margin: 0;
+  margin: 24px;
 }
 .mySlides {
   display: none;
@@ -92,9 +153,9 @@ nav {
 }
 .dot {
   cursor: pointer;
-  height: 35px;
-  width: 35px;
-  margin: 0 12px;
+  height: 24px;
+  width: 24px;
+  margin: 0 8px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -165,13 +226,284 @@ footer img {
   border-radius: 8px;
 }
 
+/*ABOUT*/
+article#about {
+  background: white;
+  margin: 8px auto;
+  padding: 48px;
+  border-radius: 8px;
+}
+#bio-img {
+  width: 350px;
+  border-radius: 0;
+  float: left;
+  margin-left: 36px;
+  margin-right: 16px;
+  padding: 6px 0;
+  border-radius: 8px;
+}
+.about-text {
+  display: block;
+  margin-left: 36px;
+  max-width: 90ch;
+  line-height: 1.40;
+  color: hsl(212, 12%, 24%);
+  font-size: 600;
+  font-family: roboto;
+  font-size: 18px;
+  padding-bottom: 18px;
+  text-indent: 18px;
+}
+#contact-info {
+  clear: both;
+  text-align: center;
+  padding-top: 24px;
+  font-size: 20px;
+  color: hsl(212, 12%, 24%);
+  font-weight: 700;
+  font-family: quicksand;
+}
+#contact-info a {
+  font-family: quicksand;
+  text-decoration: none;
+  color: hsl(212, 12%, 24%)
+}
+#worksLink {
+  font-family: quicksand;
+  color: hsl(212, 12%, 24%);
+  text-decoration: none;
+  font-size: 18px;
+}
+#worksLink:hover {
+  color: black;
+  font-weight: 900;
+}
+/*ABOUT END*/
+
+/* WORKS */
+article#works{
+  height: 80vh;
+  width: 100%;
+  overflow: auto;
+
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 24px;
+}
+.work-card {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 48px;
+  padding: 12px;
+  border-radius: 25px;
+  background: white;
+}
+.type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  font-family: quicksand;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(212, 18%, 24%);
+}
+.img {
+  position: relative;
+  width: 400px;
+  border-radius: 5px;
+}
+.img img {
+  border-radius: 5px;
+}
+.card-text {
+  padding: 0 8px 8px 8px;
+  width: 70ch;
+  position: relative;
+}
+.card-text h3, h4 {
+  color: hsl(212, 18%, 24%);
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: quicksand-bold;
+}
+.card-text h4, p {
+  font-weight: 500;
+  color: hsl(212, 12%, 40%);
+  font-family: quicksand;
+  font-size: 16px;
+}
+.card-text h4 {
+  font-family: quicksand-bold;
+  font-weight: 400;
+}
+.card-text p {
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 8px 0;
+}
+.card-text h3 {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: lemonmilk;
+  letter-spacing: 0.02em;
+  padding-bottom: 8px;
+}
+.img .svg {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 36px;
+}
+.img:hover .svg{
+  display: block;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: hsla(212, 0%, 0%, .4);
+  z-index: 1;
+}
+iframe {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#close-overlay {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 70px;
+  height: 70px;
+}
+#close-overlay img {
+  display: block;
+  position: relative;
+  top: 35;
+  right: 0;
+  margin: 12px auto; 
+}
+/* WORK CARD TITLE FONT SETTING */
+.work-card b {
+  font-size: 24px;
+}
+.work-card#crazy-car b {
+  font-family: big-noodle;
+  font-size: 28px;
+}
+.work-card#i-think-im-gay b {
+  font-family: lobster;
+}
+.work-card#theo-and-casey b {
+  font-family: cookie;
+  letter-spacing: 1px;
+}
+.work-card#way-of-the-wolf b {
+  font-family: eight-bit;
+  font-size: 20px;
+}
+.work-card#in-my-life b {
+  font-family: vintage;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+}
+.work-card#not-that-girl b {
+  font-family: rajdhani;
+}
+.work-card#biographers-wife b, #biographers-wife h3{
+  font-family: la-belle;
+  padding-top: 5px;
+}
+.work-card#wonder-buffalo b {
+  font-family: bubblegum;
+}
+.work-card#con b {
+  font-family: couture;
+  letter-spacing: .6px;
+}
+/* WORKS END */
+
+/* CONTACT */
+#contact {
+  padding: 24px 0 0 0; 
+  display: flex;
+  flex-direction: column;
+}
+.pair {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+}
+#map-ac {
+  width: 15%;
+  margin-left: 5%;
+}
+#servicesOffered {
+  font-family: quicksand;
+  text-overflow: ellipsis;
+  width: 75ch;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: hsl(212, 12%, 24%);
+  width: 65%;
+  padding: 24px;
+  margin-left: 5%;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 2px 5px hsla(212, 12%, 24%, .2), 8px 12px hsla(212, 12%, 24%, .025);
+}
+form {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input, textarea {
+  padding: 12px;
+  border: 2px solid hsl(212, 12%, 24%);
+  border-radius: 5px;
+  margin: 4px auto;
+  font-size: 18px;
+  font-weight: 600;
+  width: 90%;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input[type="submit"] {
+  width: fit-content;
+  padding: 12px 24px;
+  color: hsl(212, 45%, 18%);
+}
+/* CONTACT END */
+
 @media screen and (max-device-width: 800px) {
   body {
     background-size: 150%;
     background-position: 220px -100px;
 
     grid-template-columns: 1fr;
-    grid-template-rows: .8fr 1.2fr 0.5fr;
+    grid-template-rows: 700px 1.2fr 300px;
     grid-template-areas:
       "title"
       "main"
@@ -242,4 +574,8 @@ footer img {
   footer ol {
     padding: 0;
   }
+  /*SLIDER END*/
+  /*ABOUT*/
+
+  /*ABOUT END*/
 }
