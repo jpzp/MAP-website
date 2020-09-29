@@ -510,9 +510,11 @@ input[type="submit"] {
       "socials";
   }
   
-  header h1 {
-    padding: 2rem .8rem 1rem;
+  header {
     margin: 20px;
+  }
+  header h1 {
+    padding: 2rem 0 1rem;
     text-align: left;
     font-size: 7em;
     line-height: 120px;
@@ -520,8 +522,8 @@ input[type="submit"] {
   header h2#title {
     text-align: left;
     display: block;
-    padding: 0 20px 20px;
-    margin: 20px 20px 40px;
+    padding: 0 0 20px;
+    margin: 20px 0 40px;
     font-size: 3em;
   }
   header h2#desktop {
@@ -558,6 +560,7 @@ input[type="submit"] {
     height: 1000px;
     width: 100%;
     overflow: hidden;
+    margin: 0 auto;
   }
   .mySlides {
     height: 1000px;
@@ -575,7 +578,66 @@ input[type="submit"] {
     padding: 0;
   }
   /*SLIDER END*/
-  /*ABOUT*/
 
+  /*ABOUT*/
+  article#about {
+    margin: 16px auto;
+    width: 85%;
+  }
+  #bio-img {
+    width: 50%;
+  }
+  .about-text p {
+    font-size: 16px;
+  }
   /*ABOUT END*/
+
+  /* WORKS */
+  article#works {
+    overflow: visible;
+    height: 100%;
+  }
+  .work-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 24px;
+    width: 80%;
+    margin: 12px auto;
+  }
+  .img {
+    width: 80%;
+    margin: 10px auto;
+    height: auto;
+  }
+  .card-text {
+    width: 80ch;
+    padding-bottom: 18px;
+  }
+  .work-card h4, .work-card p {
+    font-size: 18px;
+  }
+  /* WORKS END */
+
+  /* CONTACT */
+  #map-ac {
+    width: 20%;
+  }
+  form {
+    margin: 12px 0;
+  }
+  input {
+    height: 1.5vh;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  textarea {
+    height: 10vh;
+  }
+  input[type=submit] {
+    padding: 12px;
+    height: 4vh;
+    width: 8vh;
+    font-size: 28px;
+  }
+  /* CONTACT END */
 }
