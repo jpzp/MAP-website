@@ -73,11 +73,10 @@ h1, h2, h3, h4, p, a {
 /*image position needs to be fixed*/
 body {
   font-family: rajdhani;
-  background-image: url('images/NeonCartCompass.png');
+  background-image: url('images/NeonCartCompass_Desktop.png');
   background-color: #131217;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: -1150px -1300px;
+  background-size: 40%;
   overflow-x: hidden;
 
   display: grid;
@@ -522,7 +521,8 @@ input[type="submit"] {
   body {
     background-size: 150%;
     background-position: 220px -100px;
-
+    background-image: url('images/NeonCartCompass.png');
+    
     grid-template-columns: 1fr;
     grid-template-rows: 700px 1.2fr 300px;
     grid-template-areas:
