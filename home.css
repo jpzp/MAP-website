@@ -82,7 +82,7 @@ body {
 
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr;
   grid-template-rows: 300px 2fr 300px;
   grid-template-areas:
     "title title title"
@@ -252,7 +252,7 @@ article#about {
   font-family: roboto;
   font-size: 18px;
   padding-bottom: 18px;
-  text-indent: 18px;
+  text-indent: 64px;
 }
 #contact-info {
   clear: both;
@@ -496,6 +496,27 @@ input[type="submit"] {
   color: hsl(212, 45%, 18%);
 }
 /* CONTACT END */
+@media screen and (max-device-width: 1299px) {
+  article#works {
+    margin: 0;
+  }
+  .work-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 24px;
+    width: 80%;
+    margin: 36px auto;
+  }
+  .img {
+    width: 80%;
+    margin: 10px auto;
+    height: auto;
+  }
+  .card-text {
+    width: 70ch;
+    padding-bottom: 36px;
+  }
+}
 
 @media screen and (max-device-width: 800px) {
   body {
@@ -614,22 +635,6 @@ input[type="submit"] {
     height: 100%;
     margin: 0;
   }
-  .work-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 24px;
-    width: 80%;
-    margin: 36px auto;
-  }
-  .img {
-    width: 80%;
-    margin: 10px auto;
-    height: auto;
-  }
-  .card-text {
-    width: 80ch;
-    padding-bottom: 36px;
-  }
   .work-card b{
     font-size: 40px;
   }
@@ -644,7 +649,7 @@ input[type="submit"] {
   }
   .type {
     font-size: 28px;
-    padding: 8px;
+    padding: 12px 0;
   }
   /* WORKS END */
 
