@@ -530,17 +530,32 @@ input[type="submit"] {
     display: none;
   }
   nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px 12px;
+    margin: 64px 0;
+  }
+  .nav #menu  {
     display: none;
   }
-  .nav ol li, #menu  {
-    display: none;
-  }
-  .nav.responsive li, .nav.responsive #menu {
-    float: none;
-    display: block;
+  .nav ol li {
+    margin:  50px auto;
+    width: max-content;
+    font-weight: 900;
   }
   .nav.responsive #menu {
-    width: 90%;
+    float: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 40vh;
+    z-index: 100;
+    background-color: hsl(212, 12%, 24%);
+    border-radius: 0 0 0 100px;
+    padding-top: 24px;
   }
   nav::after {
     content: "\f142";
@@ -549,6 +564,7 @@ input[type="submit"] {
     font-style: normal;
     font-size: 4em;
     margin-right: 0.5em;
+    z-index: 200;
   }
   /* Slider */
   .container {
