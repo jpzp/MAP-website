@@ -18,11 +18,15 @@ let sliderFactory = () => {
 
   // Displays slide "n";
   function showSlides(n) {
+    console.log("n" + n);
+    console.log("slide index" + slideIndex);
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length)  {slideIndex = 1}
-    if (n < 1) {slideIndex = slide.length}
+    console.log(slides.length);
+    if (n > slides.length)  {slideIndex = 1;}
+
+    else if (n < 1) {slideIndex = slides.length;}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display= "none";
     }
