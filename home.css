@@ -612,13 +612,14 @@ input[type="submit"] {
   article#works {
     overflow: visible;
     height: 100%;
+    margin: 0;
   }
   .work-card {
     flex-direction: column;
     align-items: center;
     padding: 12px 24px;
     width: 80%;
-    margin: 12px auto;
+    margin: 36px auto;
   }
   .img {
     width: 80%;
@@ -627,10 +628,23 @@ input[type="submit"] {
   }
   .card-text {
     width: 80ch;
-    padding-bottom: 18px;
+    padding-bottom: 36px;
+  }
+  .work-card b{
+    font-size: 40px;
+  }
+  .work-card#crazy-car b {
+    font-size: 46px;
+  }
+  .work-card#way-of-the-wolf b {
+    font-size: 36px;
   }
   .work-card h4, .work-card p {
-    font-size: 18px;
+    font-size: 28px;
+  }
+  .type {
+    font-size: 28px;
+    padding: 8px;
   }
   /* WORKS END */
 
