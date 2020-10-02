@@ -18,12 +18,9 @@ let sliderFactory = () => {
 
   // Displays slide "n";
   function showSlides(n) {
-    console.log("n" + n);
-    console.log("slide index" + slideIndex);
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-    console.log(slides.length);
     if (n > slides.length)  {slideIndex = 1;}
 
     else if (n < 1) {slideIndex = slides.length;}
@@ -100,7 +97,7 @@ let sliderFactory = () => {
       timer.reset();
     }
   }
-  return { showSlides, currentSlide }
+  return { showSlides, currentSlide, plusSlides }
 };
 
 let slide = sliderFactory();
@@ -115,6 +112,51 @@ function expand() {
     x.className = "nav icon";
   }
 }
+
+
+
+
+let j = 0;
+const imgTouch = document.querySelector(".slideshow-container");
+console.log("do we  get here");
+imgTouch.addEventListener("touchstart",  start);
+imgTouch.addEventListener("touchend", end);
+
+let x0 = null;
+let y0 = null;
+let x1 = null;
+let y1 = null;
+
+function start(ev) {
+  //save x and y of touchstart
+  
+  x0 = ev.touches[0].clientX;
+  y0 = ev.touches[0].clientY;
+  console.log(x0, y0);
+}
+
+function end(ev) {
+  x1 = ev.changedTouches[0].clientX;
+  y1 = ev.changedTouches[0].clientY;
+  console.log(x1, y1);
+
+  let deltaX = x1 - x0;
+  let deltaY = y1 - y0;
+  let slope = deltaY / deltaX
+  console.log("DELTA X: " + deltaX);
+  console.log("Slope: " + slope);
+
+  //swipe in X direction rather than Y
+  if(( slope < 1 || slope > -1 ) && ( Math.abs(deltaX) > 170 )) {
+    slide.plusSlides(Math.sign(-deltaX));
+  }
+
+  x0, x1, y0, y1 = null;
+
+}
+
+
+
 
 // Video Popup
 // Video popup code
@@ -158,6 +200,8 @@ function videoOnClick(cardId){
   frame.allowFullscreen = true;
   overlay.appendChild(frame);
 }
+
+
 
 
 
