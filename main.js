@@ -193,8 +193,8 @@ function videoOnClick(cardId){
   overlay.style.display = "block";
   const frame = document.createElement('iframe');
   frame.src= vidLinks[cardId];
-  frame.width= "720";
-  frame.height="405";
+  frame.width= "1024";
+  frame.height="576";
   frame.frameBorder="0";
   frame.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   frame.allowFullscreen = true;

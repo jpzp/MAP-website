@@ -80,9 +80,9 @@ body {
   overflow-x: hidden;
 
   display: grid;
-  height: 100%;
+  height: 90%;
   grid-template-columns: 0.5fr 1fr 1fr;
-  grid-template-rows: 300px 2fr 300px;
+  grid-template-rows: 220px 2fr 50px;
   grid-template-areas:
     "title title title"
     "nav main main"
@@ -204,46 +204,57 @@ footer {
   margin: auto;
   margin-bottom: 0;
 }
-footer ol{
-  list-style: none;
-  justify-content: center;
-  display: flex;
-  padding-top: 64px;
-  margin: 0 auto;
-  padding-inline-start: 0px;
-}
-footer li {
-  justify-self: center;
-  width: fit-content;
-  margin: 8px;
-}
 footer a {
   justify-self: center;
+  margin: .5rem;
 }
 footer img {
   width: 50px;
   border-radius: 8px;
+}
+.fas, .fab {
+  color: white;
+  font-size: 36px;
+}
+a#mail:hover .fas {
+  color:#f03830;
+  /*
+  RGB code:	rgb(240, 56, 48)	
+  Hsl code:	hsl(3, 86%, 56%)
+  */
+}
+a#linkedIn:hover .fab {
+  color: #2464b4;
+  /*
+  RGB code:	rgb(36, 100, 180)	
+  Hsl code:	hsl(213, 67%, 42%)
+  */
+}
+a#imdb:hover .fab {
+  color: #f5c618;
+  /*
+  RGB code:	rgb(245, 198, 24)	
+  Hsl code:	hsl(47, 92%, 53%)
+  */
 }
 
 /*ABOUT*/
 article#about {
   background: white;
   margin: 8px auto;
-  padding: 48px;
+  padding: 32px;
   border-radius: 8px;
 }
 #bio-img {
   width: 350px;
   border-radius: 0;
   float: left;
-  margin-left: 36px;
   margin-right: 16px;
-  padding: 6px 0;
+  padding: 6px 0 120px;
   border-radius: 8px;
 }
 .about-text {
   display: block;
-  margin-left: 36px;
   max-width: 90ch;
   line-height: 1.40;
   color: hsl(212, 12%, 24%);
@@ -446,12 +457,12 @@ iframe {
 .pair {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 24px auto;
   width: 100%;
 }
 #map-ac {
-  width: 15%;
-  margin-left: 5%;
+  width: 19%;
+  object-fit: contain;
 }
 #servicesOffered {
   font-family: quicksand;
@@ -464,11 +475,10 @@ iframe {
   color: hsl(212, 12%, 24%);
   width: 65%;
   padding: 24px;
-  margin: 64px 48px;
-  margin-left: 5%;
+  margin: auto 48px;
   border-radius: 25px;
   background: white;
-  box-shadow: 2px 5px hsla(212, 12%, 24%, .2), 8px 12px hsla(212, 12%, 24%, .025);
+  height: fit-content;
 }
 form {
   padding-top: 10px;
@@ -515,6 +525,21 @@ input[type="submit"] {
   .card-text {
     width: 70ch;
     padding-bottom: 36px;
+  }
+  #map-ac {
+    width: 25%;
+  }
+}
+
+@media screen and (max-device-width: 1200px) {
+  #bio-img {
+    padding: 6px 0;
+  }
+}
+
+@media screen and (max-device-width: 1000px) {
+  #map-ac {
+    width: 30%;
   }
 }
 
@@ -615,6 +640,9 @@ input[type="submit"] {
   footer ol {
     padding: 0;
   }
+  .fas, .fab {
+    font-size: 72px;
+  }
   /*SLIDER END*/
 
   /*ABOUT*/
@@ -679,3 +707,4 @@ input[type="submit"] {
     padding: 24px;
   }
   /* CONTACT END */
+}
