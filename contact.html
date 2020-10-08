@@ -34,14 +34,12 @@
     </h2>
     <img id="map-ac" src="images/Michael-AC-Commission.png">
     </div>
-    <form>
-      <div id="form">
-        <input type="text" placeholder="Name" id="name">
-        <input type="email" placeholder="Email@example.com">
-        <input type="text" placeholder="Subject">
-        <textarea rows="4"></textarea>
+    <form action="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Name" >
+        <input type="email" name="email" idplaceholder="Email@example.com">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Message" rows="4"></textarea>
         <input type="submit" value="Submit">
-      </div>
     </form>
   </article>
 
