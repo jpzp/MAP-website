@@ -500,6 +500,9 @@ input[type="submit"] {
   padding: 12px 24px;
   color: hsl(212, 45%, 18%);
 }
+.hidden {
+  display: none;
+}
 /* CONTACT END */
 @media screen and (max-device-width: 1299px) {
   article#works {
