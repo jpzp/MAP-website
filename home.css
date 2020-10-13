@@ -133,7 +133,7 @@ body {
   display: grid;
   height: 100vh;
   grid-template-columns: 0.5fr 1fr 1fr;
-  grid-template-rows: 220px 2fr 50px;
+  grid-template-rows: 20vh 75vh 5vh;
   grid-template-areas:
     "title title title"
     "nav main main"
@@ -156,17 +156,16 @@ header {
 }
 header h1 {
   text-align: right;
-  font-size: 6em;
+  font-size: 8vh;
   line-height: 80px;
   letter-spacing: 3.25px;
-  padding-top: 20px;
 }
 header h2 {
   text-align: right;
   color: #A4A4A4;
-  font-size: 3.5em;
+  font-size: 5vh;
   font-weight: 300;
-  line-height: 100px;
+  line-height: 5vh;
 }
 header h2#title {
   display: none;
@@ -186,20 +185,27 @@ nav {
 .nav ol li a {
   text-decoration: none;
   color: #A4A4A4;
-  font-size: 3em;
+  font-size: 4vh;
 }
 
 .container {
   grid-area: main;
+  height: 75vh;
 }
 .slideshow-container {
-  margin: 24px;
+  margin: 0 24px;
+  height: 75vh;
 }
 .mySlides {
   display: none;
+  height: 100%;
+  width: fit-content;
 }
 .mySlides img {
-  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
 }
 .dot {
   cursor: pointer;
@@ -214,11 +220,15 @@ nav {
 .active, .dot:hover {
   background-color: #717171;
 }
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5%;
+}
 .prev, .next {
   cursor: pointer;
-  top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: -12px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -236,6 +246,11 @@ nav {
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+.text {
+  padding-top: 12px;
+  width: 30%;
+  margin: 0 auto;
+}
 .text a {
   display:none;
   font-style: normal;
@@ -246,8 +261,11 @@ nav {
   padding: 8px 12px;
   position: relative;
   bottom: 8px;
-  width: 100%;
+  width: fit-content;
   text-align: center;
+}
+.mySlides:hover > .text a {
+  display: block;
 }
 
 footer {
