@@ -200,18 +200,20 @@ nav {
   display: none;
   height: 100%;
   width: fit-content;
+  margin: 0 auto;
 }
 .mySlides img {
   display: block;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
-  margin: auto;
+  margin: 0 auto;
 }
 .dot {
   cursor: pointer;
-  height: 24px;
-  width: 24px;
-  margin: 0 8px;
+  height: 18px;
+  width: 18px;
+  margin: 0 4px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -256,7 +258,7 @@ nav {
   font-style: normal;
   text-decoration: none;
   color: #f2f2f2;
-  font-size: 36px;
+  font-size: 3vh;
   font-family: rajdhani;
   padding: 8px 12px;
   position: relative;
@@ -313,31 +315,34 @@ article#about {
   margin: 8px auto;
   padding: 32px;
   border-radius: 8px;
+  height: 75vh;
 }
 #bio-img {
   width: 350px;
   border-radius: 0;
   float: left;
   margin-right: 16px;
-  padding: 6px 0 120px;
+  padding: 6px 0;
   border-radius: 8px;
 }
 .about-text {
   display: block;
-  max-width: 90ch;
+  max-width: 55ch;
   line-height: 1.40;
   color: hsl(212, 12%, 24%);
   font-size: 600;
   font-family: roboto;
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 18px;
+  margin-left: 350px;
   text-indent: 64px;
 }
 #contact-info {
   clear: both;
+  position: relative;
+  bottom: 8px;
   text-align: center;
-  padding-top: 24px;
-  font-size: 20px;
+  font-size: 18px;
   color: hsl(212, 12%, 24%);
   font-weight: 700;
   font-family: quicksand;
@@ -518,30 +523,32 @@ iframe {
 
 /* CONTACT */
 #contact {
-  padding: 24px 0 0 0; 
+  padding: 0; 
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
 .pair {
   display: flex;
   flex-direction: row;
-  margin: 24px auto;
+  margin: 0 auto;
   width: 100%;
 }
 #map-ac {
-  width: 19%;
+  width: 15%;
   object-fit: contain;
 }
 #servicesOffered {
+  align-self: flex-start;
   font-family: quicksand;
   text-overflow: ellipsis;
   width: 75ch;
   text-align: left;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.5;
   color: hsl(212, 12%, 24%);
-  width: 65%;
+  max-width: 55ch;
   padding: 24px;
   margin: auto 48px;
   border-radius: 25px;
@@ -549,17 +556,16 @@ iframe {
   height: fit-content;
 }
 form {
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 input, textarea {
-  padding: 12px;
+  padding: 8px 12px;
   border: 2px solid hsl(212, 12%, 24%);
   border-radius: 5px;
   margin: 4px auto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   width: 90%;
 }
@@ -572,7 +578,7 @@ input[type="submit"] {
   display: none;
 }
 /* CONTACT END */
-@media screen and (max-device-width: 1299px) {
+@media screen and (max-width: 1299px) {
   article#works {
     margin: 0;
   }
@@ -589,7 +595,7 @@ input[type="submit"] {
     height: auto;
   }
   .card-text {
-    width: 70ch;
+    width: 100%;
     padding-bottom: 36px;
   }
   #map-ac {
@@ -597,19 +603,29 @@ input[type="submit"] {
   }
 }
 
-@media screen and (max-device-width: 1200px) {
+@media screen and (max-width: 1200px) {
   #bio-img {
     padding: 6px 0;
   }
-}
-
-@media screen and (max-device-width: 1000px) {
-  #map-ac {
-    width: 30%;
+  #bio-img {
+    width: 40%;
+  }
+  .about-text{ 
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 
-@media screen and (max-device-width: 800px) {
+@media screen and (max-width: 1000px) {
+  #map-ac {
+    width: 30%;
+  }
+  #contact-info {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 800px), (max-device-width: 800px) {
   body {
     background-size: 150%;
     background-position: 220px -100px;
@@ -719,8 +735,11 @@ input[type="submit"] {
   #bio-img {
     width: 50%;
   }
-  .about-text p {
-    font-size: 16px;
+  .about-text {
+    font-size: 26px;
+  }
+  #contact-info {
+    font-size: 30px;
   }
   /*ABOUT END*/
 
