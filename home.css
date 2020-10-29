@@ -312,10 +312,10 @@ a#imdb:hover .fab {
 /*ABOUT*/
 article#about {
   background: white;
-  margin: 8px auto;
-  padding: 32px;
+  margin: 18px auto;
+  padding: 24px;
   border-radius: 8px;
-  height: 75vh;
+  height: fit-content;
 }
 #bio-img {
   width: 350px;
